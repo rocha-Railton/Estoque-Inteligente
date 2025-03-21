@@ -30,6 +30,18 @@ Todos os números a serem inseridos devem ser maiores ou igual a zero, também n
 
 - *Adicionar ao Estoque*: Permite realizar a adição de diversos produtos do estoque de uma única vez.
 Para que a finalização deste processo de adição seja possível todos os números a serem inseridos devem ser maiores ou igual a zero e devem manter um padrão de números inteiros. Caso haja a tentativa de  adicionar algum valor fora do padrão, não será possível seguir com o processo.
+
+
+## Tecnologias
+
+ - [Django](https://pypi.org/project/Django/)
+ - [Python](https://www.python.org/downloads/)
+ - [CDN](https://getbootstrap.com/docs/5.3/getting-started/download/)
+ - [SQLite](https://sqlitebrowser.org/dl/)
+ - [VScode](https://code.visualstudio.com/download)
+ - [HTML](https://code.visualstudio.com/docs/languages/html)
+ - [JavaScript](https://code.visualstudio.com/docs/languages/javascript)
+ - [DjangoModels](https://www.w3schools.com/django/django_models.php)
  
 
 ## Como Rodar o Projeto
