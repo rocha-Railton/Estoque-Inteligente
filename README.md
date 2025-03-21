@@ -41,10 +41,12 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
 ```bash
 
 # Clone este repositório
-$ gh repo clone SamuelMineiro/Estoque-Inteligente
+$ git clone https://github.com/SamuelMineiro/Estoque-Inteligente.git
 
-# Acesse a pasta do projeto no terminal/cmd e ative o ambiente virtual
-$ cd Python\\venv\\Scripts
+# Acesse a pasta do projeto no terminal/cmd 
+$ cd Estoque-inteligente\venv\Scripts
+
+# ative o ambiente virtual
 $ activate
 
 #volte a pasta raiz
