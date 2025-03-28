@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from app.views import home, form, create, view, edit, update, delete, sell, process_sell, add_stock, process_stock
+from app.views import home, form, create, view, edit, update, delete, sell, process_sell, add_stock, process_stock, generate_report
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,4 +30,5 @@ urlpatterns = [
     path('process_sell/', process_sell, name='process_sell'),
     path('add_stock/', add_stock, name='add_stock'),
     path('process_stock/', process_stock, name='process_stock'),
+    path('report/', generate_report, name='generate_report'),
 ]

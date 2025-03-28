@@ -16,3 +16,10 @@ class Meta:
         models.UniqueConstraint(fields=['nome', 'marca'], name='unique_produto_marca')
         ]
 
+class Venda(models.Model):
+    produto = models.ForeignKey(Produto, on_delete=models.CASCADE)  # Relaciona com o Produto
+    quantidade_vendida = models.PositiveIntegerField()  # Quantidade de unidades vendidas
+    data_venda = models.DateTimeField(auto_now_add=True)  # Data e hora da venda
+
+    def calcular_total(self):
+        return self.quantidade_vendida * self.produto.valor  # Total faturado
