@@ -8,12 +8,13 @@
     <style>
         .edit-container {
             background-color: rgba(0, 0, 0, 0.7); /* Fundo preto semi-transparente */
-            color: white; /* Texto branco */
-            padding: 20px;
+            color: white;
+            padding: 20px; /* Aumenta o espaçamento interno */
             border-radius: 10px; /* Cantos arredondados */
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra */
-            max-width: 800px; /* Largura máxima */
+            max-width: 500px; /* Aumenta a largura do quadrado */
             margin: 20px auto; /* Centraliza horizontalmente */
+            font-size: 20px; /* Fonte maior */
         }
 
         body {
@@ -26,84 +27,68 @@
 
         label {
             color: #ffffff;
-            font-weight: bold; /* Texto em negrito */
-            text-shadow: 1px 1px 2px black; /* Sombra no texto */
+            font-weight: bold;
+            text-align: left; /* Alinha os labels à esquerda */
+            font-size: 18px; /* Ajusta o tamanho dos labels */
+            margin-bottom: 5px;
         }
+        .input-container {
+            display: flex;
+            flex-direction: column; /* Deixa os elementos empilhados */
+            align-items: center; /* Centraliza horizontalmente */
+            margin-bottom: 10px; /* Espaçamento menor entre os campos */
+        }
+    
+        .input-container label {
+        font-size: 20px; /* Aumenta levemente o tamanho da fonte */
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
 
-        .alert-danger {
-            background-color: #f8d7da;
-            color: #842029;
-            border-color: #f5c2c7;
-            border-radius: 5px;
-            padding: 10px;
-            margin-bottom: 15px;
-        }
+    .input-container input {
+        font-size: 20px; /* Aumenta levemente o tamanho da fonte nos inputs */
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        width: 85%;
 
-        tbody tr:hover {
-            background-color: rgba(255, 255, 255, 0.2) !important;
-            cursor: pointer;
         }
-        .btn:hover {
-            transform: scale(1.1);
-            transition: transform 0.2s ease-in-out;
+    
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centraliza todo o formulário */
+            gap: 15px; /* Define espaçamento entre os elementos principais */
         }
-
     </style>
 </head>
 
 <body>
     <div class="col-8 m-auto pt-2 pb-2 text-center">
-        <h1 style="color: white; text-shadow: 1px 1px 5px black;">EDITAR PRODUTOS</h1>
+        <h1 style="color: black; text-shadow: 1px 1px 5px  white;">EDITAR PRODUTOS</h1>
     </div>
     
     <div class="edit-container">
         <form action="/update/{{ db.id }}/" method="post">
             {% csrf_token %}
             
-            <!-- Renderizar erros gerais do formulário -->
-            {% if form.non_field_errors %}
-            <div class="alert alert-danger" role="alert">
-                {{ form.non_field_errors }}
-            </div>
-            {% endif %}
-
-            <!-- Renderizar mensagens de erro para os campos -->
-            {% if form.errors %}
-            <div class="alert alert-danger" role="alert">
-                <ul>
-                    {% for field, errors in form.errors.items %}
-                        {% if field != "__all__" %} <!-- Ignorar erros gerais já exibidos -->
-                            {% for error in errors %}
-                            <li>{{ error }}</li>
-                            {% endfor %}
-                        {% endif %}
-                    {% endfor %}
-                </ul>
-            </div>
-            {% endif %}
-
             <!-- Campo Nome do Produto -->
-            <div class="row mb-3">
-                <label for="nome" class="col-sm-5 col-form-label text-end">Nome do Produto :</label>
-                <div class="col-sm-5">
-                    {{ form.nome }}
-                </div>
+            <div class="input-container">
+                <label for="nome">Nome do Produto</label>
+                {{ form.nome }}
             </div>
             
             <!-- Campo Nome da Marca -->
-            <div class="row mb-3">
-                <label for="marca" class="col-sm-5 col-form-label text-end">Nome da Marca :</label>
-                <div class="col-sm-5">
-                    {{ form.marca }}
-                </div>
+            <div class="input-container">
+                <label for="marca">Nome da Marca</label>
+                {{ form.marca }}
             </div>
             
             <!-- Campo Valor -->
-            <div class="row mb-3">
-                <label for="valor" class="col-sm-5 col-form-label text-end">Valor :</label>
-                <div class="col-sm-5">
-                    {{ form.valor }}
-                </div>
+            <div class="input-container">
+                <label for="valor">Valor</label>
+                {{ form.valor }}
             </div>
             
             <!-- Botões -->

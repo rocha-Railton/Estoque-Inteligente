@@ -17,8 +17,14 @@
             background-repeat: no-repeat;
             background-position: center;
             background-attachment: fixed;
+            font-size: 18px; /* Aumenta o tamanho das letras globalmente */
         }
-
+        h1 {
+            font-size: 40px; /* Aumenta o tamanho dos títulos */
+        }
+        .table th, .table td {
+            font-size: 20px; /* Ajusta o tamanho do texto dentro da tabela */
+        }
         tbody tr:hover {
             background-color: rgba(255, 255, 255, 0.2) !important;
             cursor: pointer;
@@ -27,13 +33,12 @@
             transform: scale(1.1);
             transition: transform 0.2s ease-in-out;
         }
-        
     </style>
 </head>
 
 <body>
     <div class="col-8 m-auto pt-2 pb-2 text-center view-container">
-        <h1 style="color: white; text-shadow: 1px 1px 5px black;">VISUALIZAÇÃO</h1>
+        <h1 style="color: black; text-shadow: 1px 1px 5px white;">VISUALIZAÇÃO</h1>
     </div> 
     
     <div class="col-8 m-auto pt-3 pb-2 text-center">
