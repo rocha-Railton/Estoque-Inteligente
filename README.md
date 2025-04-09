@@ -50,6 +50,16 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 [Git](https://git-scm.com), [python](https://www.python.org/). 
 Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
+## Colaboradores
+
+Agradecemos a todos os contribuidores que ajudaram a tornar este projeto possível:
+
+- [Guilherme Rodrigues] - Contribuidor
+- [João Fernandes] - Contribuidor
+- [Marcel Dantas] - Contribuidor
+- [Railton Rocha](https://github.com/rocha-Railton) - Contribuidor
+- [Samuel Mineiro](https://github.com/SamuelMineiro) -Contribuidor
+
 ```bash
 
 # Clone este repositório
